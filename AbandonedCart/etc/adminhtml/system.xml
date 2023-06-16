@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="abandoned_cart" translate="label" sortOrder="450">
+            <label>Abandoned Cart</label>
+        </tab>
+        <section id="abandonedcart" translate="label" type="text" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Abandoned Cart</label>
+            <tab>abandoned_cart</tab>
+            <resource>Ntz_AbandonedCart::config_abandonedcart</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Abandoned Cart Configuration</label>
+                <field id="active" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                 <field id="whitespace" type="label"/>
+
+                 <field id="email_setting" translate="label" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Email</label>
+                <frontend_model>Ntz\AbandonedCart\Block\Adminhtml\Form\Field\EmailSetting</frontend_model>
+                <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+
+                <field id="send_follow_up_email" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Send Follow-Up Email when Customer Clicks the Cart in Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>comments</comment>
+                </field>
+
+                <field id="test_email_address" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send Test Email To</label>
+                </field>
+            </group>
+
+
+            <group id="coupon" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Coupon</label>
+                <field id="rule_coupon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Rule</label>
+                </field>
+                <field id="valid_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Valid</label>
+                </field>
+                <field id="code_length" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Length</label>
+                </field>
+                <field id="code_for" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Formate</label>
+                </field>
+                <field id="code_prefix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Prefix</label>
+                </field>
+                <field id="code_sufix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Suffix</label>
+                </field>
+                <field id="dash_char" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Dash every X char</label>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
