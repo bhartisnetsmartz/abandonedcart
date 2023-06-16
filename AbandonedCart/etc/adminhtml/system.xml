@@ -32,9 +32,34 @@
                 <field id="test_email_address" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Send Test Email To</label>
                 </field>
-                
             </group>
-     
+
+
+            <group id="coupon" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Coupon</label>
+                <field id="rule_coupon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Rule</label>
+                </field>
+                <field id="valid_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Valid</label>
+                </field>
+                <field id="code_length" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Length</label>
+                </field>
+                <field id="code_for" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Formate</label>
+                </field>
+                <field id="code_prefix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Prefix</label>
+                </field>
+                <field id="code_sufix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Code Suffix</label>
+                </field>
+                <field id="dash_char" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Dash every X char</label>
+                </field>
+
+            </group>
         </section>
     </system>
 </config>

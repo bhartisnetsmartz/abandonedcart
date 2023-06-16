@@ -1,6 +1,7 @@
 <?php
 namespace Ntz\AbandonedCart\Block\Adminhtml\Form\Field;
 
+use \Ntz\AbandonedCart\Block\Adminhtml\Form\Field\Renderer\SenderRenderer;
 use \Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray;
 use \Magento\Framework\DataObject;
 
@@ -15,6 +16,7 @@ class EmailSetting extends AbstractFieldArray
         $this->addColumn('sender_option', [
             'label' => __('Sender'),
             'renderer' => $this->getOptionField(),
+            // 'renderer' => \Ntz\AbandonedCart\Block\Adminhtml\Form\Field\Renderer\SenderRenderer::class,  
         ]);
         $this->addColumn('email_temp', [
             'label' => __('Email Temptate'),
@@ -27,7 +29,6 @@ class EmailSetting extends AbstractFieldArray
         $this->_addAfter = false;
         $this->_addButtonLabel = __('Add');
     }
-
     /**
      * @return \SR\MagentoCommunity\Block\Adminhtml\Form\Field\OptionField
      */
