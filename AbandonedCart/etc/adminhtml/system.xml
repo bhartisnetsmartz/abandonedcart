@@ -1,44 +1,431 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="abandoned_cart" translate="label" sortOrder="450">
+        <tab id="abandonedcart" translate="label" sortOrder="500">
             <label>Abandoned Cart</label>
         </tab>
-        <section id="abandonedcart" translate="label" type="text" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="ntz_abandoned_cart" translate="label" showInStore="1" showInWebsite="1" showInDefault="1">
             <class>separator-top</class>
-            <label>Abandoned Cart</label>
-            <tab>abandoned_cart</tab>
-            <resource>Ntz_AbandonedCart::config_abandonedcart</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Abandoned Cart Configuration</label>
-                <field id="active" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Enabled</label>
+            <label>Abandoned Carts</label>
+            <tab>abandonedcart</tab>
+            <resource>Ntz_AbandonedCart::config</resource>
+            <group id="general" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Abandoned Cart</label>
+                <attribute type="expanded">1</attribute>
+                <field id="heading_1" translate="label" sortOrder="1" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Abandoned Cart 1</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="enabled_1" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <comment>Select Yes to enable this module.</comment>
+                </field>
+                <field id="send_after_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                    
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="sender_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                   <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="template1" translate="label" type="select" sortOrder="4" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="has_coupon1" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
                 </field>
-                 <field id="whitespace" type="label"/>
-
-                 <field id="email_setting" translate="label" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
-                <label>Email</label>
-                <frontend_model>Ntz\AbandonedCart\Block\Adminhtml\Form\Field\EmailSetting</frontend_model>
-                <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                <field id="heading_2" translate="label" sortOrder="5" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Abandoned Cart 2</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
                 </field>
-
-                <field id="send_follow_up_email" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Send Follow-Up Email when Customer Clicks the Cart in Email</label>
+                <field id="enabled_2" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="send_after_2" translate="label" sortOrder="7" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                    
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="sender_2" translate="label" sortOrder="8" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="template2" translate="label" type="select" sortOrder="9" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                 <field id="has_coupon2" translate="label" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>comments</comment>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
                 </field>
-
-                <field id="test_email_address" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Send Test Email To</label>
+                <field id="heading_3" translate="label" sortOrder="9" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Abandoned Cart 3</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_3" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="send_after_3" translate="label" sortOrder="11" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                    
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="sender_3" translate="label" sortOrder="12" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="template3" translate="label" type="select" sortOrder="13" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                 <field id="has_coupon3" translate="label" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="heading_4" translate="label" sortOrder="14" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Abandoned Cart 4</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_4" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="send_after_4" translate="label" sortOrder="16" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                   
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+                <field id="sender_4" translate="label" sortOrder="17" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+                <field id="template4" translate="label" type="select" sortOrder="18" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+                <field id="has_coupon4" translate="label" type="select" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
                 </field>
             </group>
 
+            <group id="guests" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Guests</label>
+                <attribute type="expanded">1</attribute>
+                <field id="heading_1" translate="label" sortOrder="1" showInStore="0" showInWebsite="1" showInDefault="1">
+                    <label>Abandoned Cart 1</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                </field>
+                <field id="enabled_1" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                 <comment>Select Yes to enable this module.</comment>
+                </field>
+                <field id="send_after_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                   
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="sender_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                   <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="template1" translate="label" type="select" sortOrder="4" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="has_coupon1" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="heading_2" translate="label" sortOrder="5" showInStore="0" showInWebsite="1"
+                       showInDefault="1">
+                    <label>Abandoned Cart 2</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_2" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                    </depends>
+                </field>
+                <field id="send_after_2" translate="label" sortOrder="7" type="select" showInStore="1"
+                       showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                    
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                 <field id="sender_2" translate="label" sortOrder="8" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="template2" translate="label" type="select" sortOrder="8" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="has_coupon2" translate="label" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="heading_3" translate="label" sortOrder="9" showInStore="0" showInWebsite="1"
+                       showInDefault="1">
+                    <label>Abandoned Cart 3</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_3" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                    </depends>
+                </field>
+                <field id="send_after_3" translate="label" sortOrder="11" type="select" showInStore="1"
+                       showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                    
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="sender_3" translate="label" sortOrder="12" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="template3" translate="label" type="select" sortOrder="12" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                 <field id="has_coupon3" translate="label" type="select" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="heading_4" translate="label" sortOrder="13" showInStore="0" showInWebsite="1"
+                       showInDefault="1">
+                    <label>Abandoned Cart 4</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="enabled_4" translate="label" type="select" sortOrder="14" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Enabled\Disabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                    </depends>
+                </field>
+                <field id="send_after_4" translate="label" sortOrder="15" type="select" showInStore="1"
+                       showInWebsite="1" showInDefault="1">
+                    <label>Send After</label>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+                <field id="sender_4" translate="label" sortOrder="17" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                    <label>Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+                <field id="template4" translate="label" type="select" sortOrder="16" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Email Template</label>
+                    <comment>This template will be sent as email notification.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+                <field id="has_coupon4" translate="label" type="select" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Has Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled_1">1</field>
+                        <field id="enabled_2">1</field>
+                        <field id="enabled_3">1</field>
+                        <field id="enabled_4">1</field>
+                    </depends>
+                </field>
+            </group>
 
             <group id="coupon" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Coupon</label>
                 <field id="rule_coupon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Rule</label>
+                     <source_model>Magento\SalesRule\Model\ResourceModel\Rule\Collection</source_model>
                 </field>
                 <field id="valid_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Valid</label>
@@ -47,7 +434,8 @@
                     <label>Code Length</label>
                 </field>
                 <field id="code_for" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Code Formate</label>
+                    <label>Code Format</label>
+                    <source_model>Magento\SalesRule\Model\System\Config\Source\Coupon\Format</source_model>
                 </field>
                 <field id="code_prefix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Prefix</label>
@@ -57,10 +445,10 @@
                 </field>
                 <field id="dash_char" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Dash every X char</label>
-                     <comment>comments</comment>
+                    
                 </field>
-
             </group>
+
         </section>
     </system>
 </config>
