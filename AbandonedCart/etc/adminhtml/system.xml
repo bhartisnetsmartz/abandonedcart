@@ -426,26 +426,67 @@
                 <field id="rule_coupon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Rule</label>
                      <source_model>Magento\SalesRule\Model\ResourceModel\Rule\Collection</source_model>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="valid_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Valid</label>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_length" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Length</label>
+                    <depends>
+                       <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_for" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Format</label>
                     <source_model>Magento\SalesRule\Model\System\Config\Source\Coupon\Format</source_model>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_prefix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Prefix</label>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_sufix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Suffix</label>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="dash_char" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Dash every X char</label>
-                    
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
             </group>
 
