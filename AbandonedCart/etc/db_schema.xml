@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="email_abandoned_cart" resource="default" engine="innodb" comment="Abandoned Carts Table">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Primary Key"/>
+        <column xsi:type="int" name="quote_id" padding="10" unsigned="true" nullable="true" identity="false" comment="Quote Id"/>
+        <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="true" identity="false" comment="Store Id"/>
+        <column xsi:type="int" name="customer_id" padding="10" unsigned="true" nullable="true" identity="false" comment="Customer ID"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="255" default="" comment="Email"/>
+        <column xsi:type="varchar" name="status" nullable="false" length="255" default="" comment="Contact Status"/>
+        <column xsi:type="smallint" name="is_active" padding="5" unsigned="true" nullable="false" identity="false" default="1" comment="Quote Active"/>
+        <column xsi:type="timestamp" name="quote_updated_at" on_update="false" nullable="true" comment="Quote updated at"/>
+        <column xsi:type="smallint" name="abandoned_cart_number" padding="5" unsigned="true" nullable="false" identity="false" default="0" comment="Abandoned Cart number"/>
+        <column xsi:type="smallint" name="items_count" padding="5" unsigned="true" nullable="true" identity="false" default="0" comment="Quote items count"/>
+        <column xsi:type="varchar" name="items_ids" nullable="true" length="255" comment="Quote item ids"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="true" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="false" nullable="true" comment="Updated at"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <index referenceId="EMAIL_ABANDONED_CART_QUOTE_ID" indexType="btree">
+            <column name="quote_id"/>
+        </index>
+        <index referenceId="EMAIL_ABANDONED_CART_STORE_ID" indexType="btree">
+            <column name="store_id"/>
+        </index>
+        <index referenceId="EMAIL_ABANDONED_CART_CUSTOMER_ID" indexType="btree">
+            <column name="customer_id"/>
+        </index>
+        <index referenceId="EMAIL_ABANDONED_CART_EMAIL" indexType="btree">
+            <column name="email"/>
+        </index>
+    </table>
+</schema>

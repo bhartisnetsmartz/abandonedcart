@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ntz_AbandonedCart::abandonedcart" title="Abandoned Cart" module="Ntz_AbandonedCart" sortOrder="51" resource="Ntz_AbandonedCart::abandonedcart"/>
+        <add id="Ntz_AbandonedCart::cart" title="Abandoned Cart" module="Ntz_AbandonedCart" sortOrder="10" action="abandonedcart/cart/" resource="Ntz_AbandonedCart::cart" parent="Ntz_AbandonedCart::abandonedcart"/>
+        <add id="Ntz_AbandonedCart::abandonedcart_configuration" title="Configuration" module="Ntz_AbandonedCart" sortOrder="99" parent="Ntz_AbandonedCart::abandonedcart" action="adminhtml/system_config/edit/section/abandonedcart" resource="Ntz_AbandonedCart::abandonedcart_configuration"/>
+    </menu>
+</config>
