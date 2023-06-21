@@ -21,7 +21,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                     <comment>Select Yes to enable this module.</comment>
                 </field>
-                <field id="send_after_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_1" translate="label" sortOrder="3" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
                     <depends>
@@ -64,7 +64,7 @@
                         <field id="enabled_1">1</field>
                     </depends>
                 </field>
-                <field id="send_after_2" translate="label" sortOrder="7" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_2" translate="label" sortOrder="7" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
                     <depends>
@@ -113,7 +113,7 @@
                         <field id="enabled_2">1</field>
                     </depends>
                 </field>
-                <field id="send_after_3" translate="label" sortOrder="11" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_3" translate="label" sortOrder="11" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
                     <depends>
@@ -168,7 +168,7 @@
                         <field id="enabled_3">1</field>
                     </depends>
                 </field>
-                <field id="send_after_4" translate="label" sortOrder="16" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_4" translate="label" sortOrder="16" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                    
                     <depends>
@@ -223,7 +223,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                  <comment>Select Yes to enable this module.</comment>
                 </field>
-                <field id="send_after_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_1" translate="label" sortOrder="3" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                    
                     <depends>
@@ -268,7 +268,7 @@
                         <field id="enabled_1">1</field>
                     </depends>
                 </field>
-                <field id="send_after_2" translate="label" sortOrder="7" type="select" showInStore="1"
+                <field id="send_after_2" translate="label" sortOrder="7" type="text" showInStore="1"
                        showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
@@ -320,7 +320,7 @@
                         <field id="enabled_2">1</field>
                     </depends>
                 </field>
-                <field id="send_after_3" translate="label" sortOrder="11" type="select" showInStore="1"
+                <field id="send_after_3" translate="label" sortOrder="11" type="text" showInStore="1"
                        showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
@@ -378,7 +378,7 @@
                         <field id="enabled_3">1</field>
                     </depends>
                 </field>
-                <field id="send_after_4" translate="label" sortOrder="15" type="select" showInStore="1"
+                <field id="send_after_4" translate="label" sortOrder="15" type="text" showInStore="1"
                        showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     <depends>
