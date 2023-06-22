@@ -21,7 +21,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                     <comment>Select Yes to enable this module.</comment>
                 </field>
-                <field id="send_after_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_1" translate="label" sortOrder="3" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
                     <depends>
@@ -64,7 +64,7 @@
                         <field id="enabled_1">1</field>
                     </depends>
                 </field>
-                <field id="send_after_2" translate="label" sortOrder="7" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_2" translate="label" sortOrder="7" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
                     <depends>
@@ -113,7 +113,7 @@
                         <field id="enabled_2">1</field>
                     </depends>
                 </field>
-                <field id="send_after_3" translate="label" sortOrder="11" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_3" translate="label" sortOrder="11" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
                     <depends>
@@ -168,7 +168,7 @@
                         <field id="enabled_3">1</field>
                     </depends>
                 </field>
-                <field id="send_after_4" translate="label" sortOrder="16" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_4" translate="label" sortOrder="16" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                    
                     <depends>
@@ -223,7 +223,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                  <comment>Select Yes to enable this module.</comment>
                 </field>
-                <field id="send_after_1" translate="label" sortOrder="3" type="select" showInStore="1" showInWebsite="1" showInDefault="1">
+                <field id="send_after_1" translate="label" sortOrder="3" type="text" showInStore="1" showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                    
                     <depends>
@@ -268,7 +268,7 @@
                         <field id="enabled_1">1</field>
                     </depends>
                 </field>
-                <field id="send_after_2" translate="label" sortOrder="7" type="select" showInStore="1"
+                <field id="send_after_2" translate="label" sortOrder="7" type="text" showInStore="1"
                        showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
@@ -320,7 +320,7 @@
                         <field id="enabled_2">1</field>
                     </depends>
                 </field>
-                <field id="send_after_3" translate="label" sortOrder="11" type="select" showInStore="1"
+                <field id="send_after_3" translate="label" sortOrder="11" type="text" showInStore="1"
                        showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     
@@ -378,7 +378,7 @@
                         <field id="enabled_3">1</field>
                     </depends>
                 </field>
-                <field id="send_after_4" translate="label" sortOrder="15" type="select" showInStore="1"
+                <field id="send_after_4" translate="label" sortOrder="15" type="text" showInStore="1"
                        showInWebsite="1" showInDefault="1">
                     <label>Send After</label>
                     <depends>
@@ -426,26 +426,67 @@
                 <field id="rule_coupon" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Rule</label>
                      <source_model>Magento\SalesRule\Model\ResourceModel\Rule\Collection</source_model>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="valid_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Valid</label>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_length" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Length</label>
+                    <depends>
+                       <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_for" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Format</label>
                     <source_model>Magento\SalesRule\Model\System\Config\Source\Coupon\Format</source_model>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_prefix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Prefix</label>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="code_sufix" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Code Suffix</label>
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
                 <field id="dash_char" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Dash every X char</label>
-                    
+                    <depends>
+                        <field id="*/*/has_coupon1">1</field>
+                        <field id="*/*/has_coupon2">1</field>
+                        <field id="*/*/has_coupon3">1</field>
+                        <field id="*/*/has_coupon4">1</field>
+                    </depends>
                 </field>
             </group>
 

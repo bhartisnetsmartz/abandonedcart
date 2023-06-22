@@ -18,10 +18,10 @@ class Abandoned extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Model\Context $context,
         \Magento\Framework\Registry $registry,
         public \Ntz\AbandonedCart\Model\ResourceModel\Abandoned\CollectionFactory $abandonedCollectionFactory,
-        public \Magento\Framework\Stdlib\DateTime $dateTime,
-        array $data = [],
-        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
-        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null
+        public \Magento\Framework\Stdlib\DateTime $dateTime,        
+        public \Magento\Framework\Model\ResourceModel\AbstractResource $resource,
+        public \Magento\Framework\Data\Collection\AbstractDb $resourceCollection,
+        array $data = []
     ) {
         parent::__construct(
             $context,
