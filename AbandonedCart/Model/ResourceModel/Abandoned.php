@@ -13,14 +13,14 @@ class Abandoned extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
         $this->_init('email_abandoned_cart', 'id');
     }
 
-    /**
-     * Construct
-     *
-     * @param \Magento\Framework\Model\ResourceModel\Db\Context $context context
-     */
-    public function __construct(
-        \Magento\Framework\Model\ResourceModel\Db\Context $context
-    ) {
-        parent::__construct($context);
-    }
+    // /**
+    //  * Construct
+    //  *
+    //  * @param \Magento\Framework\Model\ResourceModel\Db\Context $context context
+    //  */
+    // public function __construct(
+    //     \Magento\Framework\Model\ResourceModel\Db\Context $context
+    // ) {
+    //     parent::__construct($context);
+    // }
 }

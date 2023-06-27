@@ -30,7 +30,7 @@ class Index extends Action
      * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface|\Magento\Framework\View\Result\Page
      */
     public function execute()
-  {
+   {
     $resultPage = $this->resultPageFactory->create();
     $resultPage->getConfig()->getTitle()->prepend((__('Abandoned Cart')));
 
