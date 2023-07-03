@@ -4,5 +4,9 @@
         <job name="abandoned_cart" instance="Ntz\AbandonedCart\Model\Cron\Save" method="abandonedCartsSave">
             <schedule>* * * * *</schedule>
         </job>
+
+        <job name="abandoned_cart_send" instance="Ntz\AbandonedCart\Model\Cron\Send" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
     </group>
 </config>
