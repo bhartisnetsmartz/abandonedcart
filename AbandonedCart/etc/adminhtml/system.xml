@@ -13,7 +13,7 @@
                 <label>Abandoned Cart</label>
                 <attribute type="expanded">1</attribute>
                 <field id="heading_1" translate="label" sortOrder="1" showInStore="1" showInWebsite="1" showInDefault="1">
-                    <label>Abandoned Cart 1</label>
+                    <label>Abandoned Cart Reminder 1</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                 </field>
                 <field id="enabled_1" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -38,7 +38,7 @@
                 <field id="template1" translate="label" type="select" sortOrder="4" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                     </depends>
@@ -51,7 +51,7 @@
                     </depends>
                 </field>
                 <field id="heading_2" translate="label" sortOrder="5" showInStore="1" showInWebsite="1" showInDefault="1">
-                    <label>Abandoned Cart 2</label>
+                    <label>Abandoned Cart Reminder 2</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                     <depends>
                         <field id="enabled_1">1</field>
@@ -83,7 +83,7 @@
                 <field id="template2" translate="label" type="select" sortOrder="9" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                         <field id="enabled_2">1</field>
@@ -98,7 +98,7 @@
                     </depends>
                 </field>
                 <field id="heading_3" translate="label" sortOrder="9" showInStore="1" showInWebsite="1" showInDefault="1">
-                    <label>Abandoned Cart 3</label>
+                    <label>Abandoned Cart Reminder 3</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                     <depends>
                         <field id="enabled_1">1</field>
@@ -134,7 +134,7 @@
                 <field id="template3" translate="label" type="select" sortOrder="13" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                         <field id="enabled_2">1</field>
@@ -151,7 +151,7 @@
                     </depends>
                 </field>
                 <field id="heading_4" translate="label" sortOrder="14" showInStore="1" showInWebsite="1" showInDefault="1">
-                    <label>Abandoned Cart 4</label>
+                    <label>Abandoned Cart Reminder 4</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                     <depends>
                         <field id="enabled_1">1</field>
@@ -191,7 +191,7 @@
                 <field id="template4" translate="label" type="select" sortOrder="18" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                         <field id="enabled_2">1</field>
@@ -215,7 +215,7 @@
                 <label>Guests</label>
                 <attribute type="expanded">1</attribute>
                 <field id="heading_1" translate="label" sortOrder="1" showInStore="0" showInWebsite="1" showInDefault="1">
-                    <label>Abandoned Cart 1</label>
+                    <label>Abandoned Cart Reminder 1</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                 </field>
                 <field id="enabled_1" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
@@ -240,7 +240,7 @@
                 <field id="template1" translate="label" type="select" sortOrder="4" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                     </depends>
@@ -254,7 +254,7 @@
                 </field>
                 <field id="heading_2" translate="label" sortOrder="5" showInStore="0" showInWebsite="1"
                        showInDefault="1">
-                    <label>Abandoned Cart 2</label>
+                    <label>Abandoned Cart Reminder 2</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                     <depends>
                         <field id="enabled_1">1</field>
@@ -288,7 +288,7 @@
                 <field id="template2" translate="label" type="select" sortOrder="8" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                         <field id="enabled_2">1</field>
@@ -304,7 +304,7 @@
                 </field>
                 <field id="heading_3" translate="label" sortOrder="9" showInStore="0" showInWebsite="1"
                        showInDefault="1">
-                    <label>Abandoned Cart 3</label>
+                    <label>Abandoned Cart Reminder 3</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                     <depends>
                         <field id="enabled_1">1</field>
@@ -342,7 +342,7 @@
                 <field id="template3" translate="label" type="select" sortOrder="12" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                         <field id="enabled_2">1</field>
@@ -360,7 +360,7 @@
                 </field>
                 <field id="heading_4" translate="label" sortOrder="13" showInStore="0" showInWebsite="1"
                        showInDefault="1">
-                    <label>Abandoned Cart 4</label>
+                    <label>Abandoned Cart Reminder 4</label>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
                     <depends>
                         <field id="enabled_1">1</field>
@@ -401,7 +401,7 @@
                 <field id="template4" translate="label" type="select" sortOrder="16" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Email Template</label>
                     <comment>This template will be sent as email notification.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <source_model>Ntz\AbandonedCart\Model\Config\Source\Email\Template</source_model>
                     <depends>
                         <field id="enabled_1">1</field>
                         <field id="enabled_2">1</field>

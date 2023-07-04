@@ -13,4 +13,7 @@
             <argument name="resourceModel" xsi:type="string">Ntz\AbandonedCart\Model\ResourceModel\Abandoned</argument>
         </arguments>
     </virtualType>
+
+    <preference for="\Magento\Config\Model\Config\Source\Email\Template" type="Ntz\AbandonedCart\Model\Config\Source\Email\Template" />
+
 </config>

@@ -51,7 +51,9 @@ class Data extends AbstractHelper
 
     public function getSendAfter1()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_1);
+        $sendafter1 = $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_1);
+        $daySendafter1 = date('Y-m-d', mktime(0, 0, 0, date('m'), date('d') + $sendafter1, date('Y')));
+        return $daySendafter1;
     }
 
     public function getSender1()
@@ -77,7 +79,9 @@ class Data extends AbstractHelper
 
     public function getSendAfter2()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_2);
+        $sendafter2 = $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_2);
+        $daySendafter2 = date('Y-m-d', mktime(0, 0, 0, date('m'), date('d') + $sendafter2, date('Y')));
+        return $daySendafter2;
     }
 
     public function getSender2()
@@ -103,7 +107,9 @@ class Data extends AbstractHelper
 
     public function getSendAfter3()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_3);
+        $sendafter3 = $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_3);
+        $daySendafter3 = date('Y-m-d', mktime(0, 0, 0, date('m'), date('d') + $sendafter3, date('Y')));
+        return $daySendafter3;
     }
 
     public function getSender3()
@@ -129,7 +135,9 @@ class Data extends AbstractHelper
 
     public function getSendAfter4()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_4);
+        $sendafter4 = $this->scopeConfig->getValue(self::XML_PATH_ABANDONED_CUSTOMER_INTERVAL_4);
+        $daySendafter4 = date('Y-m-d', mktime(0, 0, 0, date('m'), date('d') + $sendafter4, date('Y')));
+        return $daySendafter4;
     }
 
     public function getSender4()
